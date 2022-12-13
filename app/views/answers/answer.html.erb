@@ -1,0 +1,19 @@
+<div class="m-5">
+  <h1 class="mb-5">Stupid coaching</h1>
+  <div class="p-3 w-50 border-start border-warning border-5 bg-light">
+    <p><%= @query %></p>
+    <p>- You</p>
+  </div>
+  <div class="mt-5 mb-5 p-3 w-50 border-start border-primary border-5 bg-light">
+    <% if @query == "I am going to work" %>
+      <p><%= "Great!" %></p>
+    <% elsif @query.include? "?" %>
+      <%= "Silly question, get dressed and go to work!" %>
+    <% else %>
+      <p><%= "I don't care, get dressed and go to work!" %></p>
+    <% end %>
+    <p>- Your coach</p>
+  </div>
+
+  <%= link_to 'Ask a new question', ask_path %>
+</div>
